@@ -1,0 +1,29 @@
+<% var data = { title: "Project", author: "Natalia Zhydejkina" }; %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="stylesheet" href="css/style.bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <title><%=data.title%></title>
+  </head>
+  <body>
+    <%= _.template(require('./../includes/header.html'))() %>
+    <div class="home-page">
+      <%= _.template(require('./../includes/index/block_1.html'))() %> 
+      <%= _.template(require('./../includes/index/block_2.html'))() %>
+    </div>
+    <%= _.template(require('./../includes/footer.html'))() %>
+  </body>
+</html>
