@@ -1,5 +1,5 @@
-[link to netlify](https://ecstatic-swirles-95c5f5.netlify.com/)
-![LAYOUT.png](https://raw.githubusercontent.com/greenmoon1558/html-projects2/dev/corporate-landing/Corporate%20Landing%20Page.psd.png)
+[link to netlify](https://sad-euler-3391d7.netlify.com/)
+![LAYOUT.png](https://raw.githubusercontent.com/greenmoon1558/html-project3/master/TravelGram/TravelGram.jpg)
 ## Project setup
 ```
 npm install

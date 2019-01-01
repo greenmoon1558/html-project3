@@ -52,24 +52,24 @@ module.exports = {
               loader: "css-loader",
               options: {
                 sourceMap: true,
-                //minimize: true,
+                minimize: true,
                 url: false
               }
             },
-            // {
-            //   loader: "postcss-loader",
-            //   options: {
-            //     ident: "postcss",
-            //     plugins: loader => [
-            //       require("postcss-import")({ root: loader.resourcePath }),
-            //       require("postcss-preset-env")(),
-            //       require("postcss-cssnext")({
-            //         browsers: ["> 1%", "ie 10"]
-            //       }),
-            //       require("cssnano")()
-            //     ]
-            //   }
-            // },
+            {
+              loader: "postcss-loader",
+              options: {
+                ident: "postcss",
+                plugins: loader => [
+                  require("postcss-import")({ root: loader.resourcePath }),
+                  require("postcss-preset-env")(),
+                  require("postcss-cssnext")({
+                    browsers: ["> 1%", "ie 10"]
+                  }),
+                  require("cssnano")()
+                ]
+              }
+            },
             {
               loader: "sass-loader",
               options: {

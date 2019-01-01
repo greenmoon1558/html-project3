@@ -5,28 +5,31 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
     />
-
     <link rel="shortcut icon" href="favicon/favicon.ico" />
     <link rel="stylesheet" href="css/style.bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
     <title>Project</title>
   </head>
   <body>
-    <header>
+    <header id="top">
   <div class="с-header с-header--big">
-    <form action="post" class="search__form">
-      <label for="search">
-        <input
-          type="search"
-          id="search"
-          class="search__input"
-          placeholder="Search and hit enter"
-        />
-        <img src="img/search.svg" alt="search icon" class="search__img" />
-      </label>
+    <form action="post" class="search__form wait-for-animate  hide--left">
+      <input
+        type="search"
+        id="search"
+        class="search__input"
+        placeholder="Search and hit enter"
+      />
+      <div class="search--inner"><i class="fas fa-search search__icon"></i></div>
     </form>
-    <div class="с-logo">
+    <div class="с-logo wait-for-animate">
       <svg
         height="110"
         viewBox="0 0 241 110"
@@ -80,11 +83,11 @@
             id="curve"
           />
           <text
-            dx="0 3 3 3 3 3 3 8 3 3 3 8 4 3 4 3 3 3 8 3 3 3 3 3 3 3 3 3 3 3 3 3 3"
+            dx="0 5 5 5 5 5 5 5 5 5 6 5 7 5 5 5 7 5 6 5 5 5 5 5 5 5"
             font-weight="400"
-            font-family="'Ostrich Sans - Black', 'Franklin Gothic Medium', sans-serif"
+            font-family="'Ostrich Sans', 'Franklin Gothic Medium', sans-serif"
             font-size="12"
-            x="16"
+            x="18"
             y="0"
           >
             <textPath fill="#000000" xlink:href="#curve">
@@ -93,39 +96,605 @@
           </text>
         </g>
       </svg>
+      <p class="logo__text js-fonts--hide">TRAVELGRAM</p>
     </div>
     <div class="с-subscribe">
-      <button type="button" class="subscribe__button">SubScribe</button>
+      <button type="button" class="subscribe__button  wait-for-animate  hide--right">SubScribe</button>
     </div>
   </div>
   <hr class="header__horizontal-line" />
   <div class="с-header с-header--small">
-    <nav class="c-menu">
+    <nav class="c-menu wait-for-animate  hide--left">
+    <input type="checkbox" name="bar-checkbox" class="с-header-bar" id="burgger" />
+    <label for="burgger" class="с-header-bar-legend">
+      <i class="fas fa-bars bar__icon"></i>
+      <i class="fas fa-times bar__icon"></i>
+    </label>
+    <div class="menu-items">
       <a href="#" class="menu__link">home</a>
       <a href="#" class="menu__link">featured</a>
       <a href="#" class="menu__link">BLOGS</a>
       <a href="#" class="menu__link">GALLERY</a>
       <a href="#" class="menu__link">categories</a>
       <a href="#" class="menu__link">contact</a>
+    </div>
     </nav>
-    <div class="c-social-media">
-      <img src="img/facebook.svg" alt="facebook" class="social-media__icon" />
-      <img src="img/twitter.svg" alt="twitter" class="social-media__icon" />
-      <img
-        src="img/google-plus.svg"
-        alt="google-plus"
-        class="social-media__icon"
-      />
-      <img src="img/instagram.svg" alt="instagram" class="social-media__icon" />
-      <img src="img/youtube.svg" alt="youtube" class="social-media__icon" />
+    <div class="c-social-media  wait-for-animate  hide--right">
+      <a href="#" class="social-media__link">
+        <i class="fab fa-facebook-f social-media__icon"></i>
+      </a>
+      <a href="#" class="social-media__link">
+        <i class="fab fa-twitter social-media__icon"></i>
+      </a>
+      <a href="#" class="social-media__link">
+        <i class="fab fa-google-plus-g social-media__icon"></i>
+      </a>
+      <a href="#" class="social-media__link">
+        <i class="fab fa-instagram social-media__icon"></i>
+      </a>
+      <a href="#" class="social-media__link">
+        <i class="fab fa-youtube social-media__icon"></i>
+      </a>
     </div>
   </div>
-  <img src="img/slider1.jpg" alt="">
 </header>
- 
+
     <div class="home-page">
+      <section class="c-block_1">
+  <div class="c-slider">
+    <div class="slider__wrapper" style="transform: translateX(0%);">
+      <div class="slider__item">
+        <img src="img/slider.jpg" class="slider__image" alt="night landscape" />
+      </div>
+      <div class="slider__item">
+        <img src="img/slider.jpg" class="slider__image" alt="night landscape" />
+      </div>
     </div>
-    
+    <div class="c-slider-info__wrapper--background">
+      <div class="c-slider-info__wrapper">
+        <div class="c-slider__headline c-slider__headline--top">
+          <h1 class="slider__headline--big">Travelling</h1>
+          <h3 class="slider__headline--small">SPORTS THAT NEVER ENDS</h3>
+        </div>
+        <div class="slider__info slider__info--bottom info">
+          <p class="info__subheadline">FEATURED BLOG</p>
+          <div class="info--left">
+            <button type="button" class="slider__btn slider__btn--top"><i class="fas fa-angle-up"></i>
+            </button>
+            <button
+              type="button"
+              class="slider__btn slider__btn--bottom"
+            ><i class="fas fa-angle-down"></i></button>
+          </div>
+          <div class="info--right">
+            <h1 class="info__headline--big">LOST IN SPACE</h1>
+            <p class="info__paragraph">
+              Some modern factory robots are "autonomous" within the strict
+              confines of their direct environment. It may not be that every
+              degree of freedom exists
+            </p>
+            <button type="button" class="info__button">EXPLORE NOW</button>
+            <div class="c-slider__pea">
+              <div class="pea js-pea--active"></div>
+              <div class="pea"></div>
+              <div class="pea"></div>
+              <div class="pea"></div>
+              <div class="pea"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="c-block_2">
+        <div class="bar bar--left  wait-for-animate hide--left">
+  <div class="c-map bar--inner">
+    <p class="map__headline bar__headline bar__headline--strong">
+      <span class="bar__headline--inner">WHERE AM I</span>
+    </p>
+    <div class="map"></div>
+  </div>
+  <div class="c-about__block  bar--inner">
+    <p class="about__headline bar__headline bar__headline--strong">
+      <span class="bar__headline--inner">ABOUT ME</span>
+    </p>
+    <p class="about__text">
+      Hi! I'm a Travellerr based on Assam I love editing photos, clicking
+      photos, creating responsive websites alongwith high quality graphics.
+    </p>
+    <p class="about__text--follow">Follow Me</p>
+    <div class="c-social-media">
+      <a href="#" class="social-media__link">
+        <i class="fab fa-facebook-f social-media__icon"></i>
+      </a>
+      <a href="#" class="social-media__link">
+        <i class="fab fa-twitter social-media__icon"></i>
+      </a>
+      <a href="#" class="social-media__link">
+        <i class="fab fa-google-plus-g social-media__icon"></i>
+      </a>
+      <a href="#" class="social-media__link">
+        <i class="fab fa-instagram social-media__icon"></i>
+      </a>
+      <a href="#" class="social-media__link">
+        <i class="fab fa-youtube social-media__icon"></i>
+      </a>
+    </div>
+    <img src="img/about-img.jpg" alt="eye" class="about__img" />
+  </div>
+  <div class="c-newsletter  bar--inner">
+    <p class="newsletter__headline bar__headline">
+      <span class="bar__headline--inner">Newsletter</span>
+    </p>
+    <form action="" class="sign-up__form">
+      <input
+        type="email"
+        id="email"
+        class="email__input"
+        placeholder="Your email address"
+      />
+      <input type="button" value="sign up" class="sing-up__input" />
+    </form>
+  </div>
+  <div class="c-categories bar--inner">
+    <p class="categories__headline bar__headline">
+      <span class="bar__headline--inner"> Categories </span>
+    </p>
+    <div class="categories__menu menu">
+      <ul class="menu__list">
+        <li class="menu__item">Nature</li>
+        <li class="menu__item">Nightlife</li>
+        <li class="menu__item">Lifestyle</li>
+        <li class="menu__item">Food</li>
+      </ul>
+    </div>
+  </div>
+  <div class="c-posts  bar--inner">
+    <p class="posts__headline bar__headline">
+      <span class="bar__headline--inner">Recent Post</span>
+    </p>
+    <div class="posts">
+      <ul class="post__list">
+        <li class="post__item">
+          <img src="img/post-1.jpg" alt="post img" class="post__img" />
+          <p class="post__title">Travelling with your buddies.</p>
+          <p class="post__date">July 25, 2016</p>
+        </li>
+        <li class="post__item">
+          <img src="img/post-2.jpg" alt="post img" class="post__img" />
+          <p class="post__title">Travelling with your buddies.</p>
+          <p class="post__date">July 25, 2016</p>
+        </li>
+        <li class="post__item">
+          <img src="img/post-3.jpg" alt="post img" class="post__img" />
+          <p class="post__title">Travelling with your buddies.</p>
+          <p class="post__date">July 25, 2016</p>
+        </li>
+        <li class="post__item">
+          <img src="img/post-4.jpg" alt="post img" class="post__img" />
+          <p class="post__title">Travelling with your buddies.</p>
+          <p class="post__date">July 25, 2016</p>
+        </li>
+        <li class="post__item">
+          <img src="img/post-5.jpg" alt="post img" class="post__img" />
+          <p class="post__title">Travelling with your buddies.</p>
+          <p class="post__date">July 25, 2016</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="c-tags  bar--inner">
+    <p class="tags__headline bar__headline">
+      <span class="bar__headline--inner">Tags</span>
+    </p>
+    <div class="tags">
+      <p class="tag">LIFESTYLE</p>
+      <p class="tag">TRAVEL</p>
+      <p class="tag">NATURE</p>
+      <p class="tag">LOST</p>
+      <p class="tag">TREKKING</p>
+      <p class="tag">LIFESTYLE</p>
+    </div>
+  </div>
+  <div class="c-contact-me  bar--inner">
+    <p class="contact-me__headline bar__headline bar__headline--strong">
+      <span class="bar__headline--inner">CONTACT ME</span>
+    </p>
+    <form action="" class="contact__form">
+      <input
+        type="text"
+        name="contact__name"
+        class="contact__name"
+        placeholder="Your Name"
+      />
+      <input
+        type="email"
+        name="contact__email"
+        class="contact__email"
+        placeholder="Your Email"
+      />
+      <textarea
+        name="contact__text"
+        class="contact__textarea"
+        placeholder="Your Massage"
+      ></textarea>
+      <input type="button" class="contact__button" value="Send" />
+    </form>
+  </div>
+</div>
+
+        <div class="bar bar--right">
+  <div class="bar__subcontaner bar__type-1  wait-for-animate  hide--left">
+    <div class="info">
+      <p class="info__subtitle">NIGHT LIFE</p>
+      <p class="info__title">Written in the stars, Million miles away!</p>
+      <hr class="info__horizontal-line" />
+      <p class="info__text">
+        A high degree of autonomy is particularly desirable in fields such as
+        space exploration...
+      </p>
+      <div class="info__buttons">
+        <button type="button" class="info__btn--readmore">Readmore</button>
+        <div class="info__social">
+          <span class="info__text--share">Share</span>
+          <div class="c-social-media">
+            <a href="#" class="social-media__link">
+              <i class="fab fa-facebook-f social-media__icon"></i>
+            </a>
+            <a href="#" class="social-media__link">
+              <i class="fab fa-twitter social-media__icon"></i>
+            </a>
+            <a href="#" class="social-media__link">
+              <i class="fab fa-instagram social-media__icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c-overlap">
+      <img
+        src="img/overlap__img1.jpg"
+        alt="starry sky"
+        class="overlap__img overlap__img--shadow"
+      />
+      <div class="overlap__info overlap__info--blue">
+        <button type="button" class="overlap__button">Readmore</button>
+        <p class="overlap__text">
+          April 19, 2017 . <i class="far fa-heart"></i> 100 .
+          <i class="far fa-comment"></i> 20
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="bar__subcontaner bar__type-1  wait-for-animate  hide--right">
+    <div class="c-overlap">
+      <img
+        src="img/overlap__img2.jpg"
+        alt="field"
+        class="overlap__img overlap__img--shadow"
+      />
+    </div>
+    <div class="info">
+      <p class="info__subtitle">Trekking</p>
+      <p class="info__title">Written in the stars, Million miles away!</p>
+      <hr class="info__horizontal-line" />
+      <p class="info__text">
+        A high degree of autonomy is particularly desirable in fields such as
+        space exploration...
+      </p>
+      <div class="info__buttons">
+        <button type="button" class="info__btn--readmore">Readmore</button>
+        <div class="info__social">
+          <span class="info__text--share">Share</span>
+          <div class="c-social-media">
+            <a href="#" class="social-media__link">
+              <i class="fab fa-facebook-f social-media__icon"></i>
+            </a>
+            <a href="#" class="social-media__link">
+              <i class="fab fa-twitter social-media__icon"></i>
+            </a>
+            <a href="#" class="social-media__link">
+              <i class="fab fa-instagram social-media__icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bar__subcontaner bar__type-2  wait-for-animate  hide--left">
+    <div class="c-overlap">
+      <img
+        src="img/overlap__img3.jpg"
+        alt="field"
+        class="overlap__img overlap__img--shadow2"
+      />
+    </div>
+    <div class="info">
+      <p class="info__subtitle">lifestyle</p>
+      <div class="info__title">
+        The Vermont Delegation Mourns the Sanders <br />
+        Campaign
+        <p class="info__solial-comments">
+          March 22, 2017 . <i class="far fa-heart"></i> 100 Likes .
+          <i class="far fa-comment"></i> 20 Comment
+        </p>
+      </div>
+
+      <div class="info__buttons">
+        <button type="button" class="info__btn--readmore">Readmore</button>
+        <div class="info__social">
+          <div class="c-social-media">
+            <a href="#" class="social-media__link">
+              <i class="fab fa-facebook-f social-media__icon"></i>
+            </a>
+            <a href="#" class="social-media__link">
+              <i class="fab fa-twitter social-media__icon"></i>
+            </a>
+            <a href="#" class="social-media__link">
+              <i class="fab fa-instagram social-media__icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bar__type-3__wrapper  wait-for-animate  hide--right">
+    <div class="bar__subcontaner bar__type-3">
+      <div class="c-overlap">
+        <img
+          src="img/overlap__img4.jpg"
+          alt="starry sky"
+          class="overlap__img"
+        />
+        <div class="overlap__info overlap__info--mustard">
+          <button type="button" class="overlap__button">Readmore</button>
+          <p class="overlap__text">
+            April 19, 2017 . <i class="far fa-heart"></i> 100 .
+            <i class="far fa-comment"></i> 20
+          </p>
+        </div>
+      </div>
+      <div class="c-overlap">
+        <img
+          src="img/overlap__img5.jpg"
+          alt="starry sky"
+          class="overlap__img"
+        />
+      </div>
+
+      <div class="info">
+        <p class="info__subtitle">FOOD and TRAVEL</p>
+        <p class="info__title">
+          And what falls, is fallen And what falls, is fallen... Bruce Wayne
+        </p>
+        <p class="info__solial-comments">
+          March 22, 2017 . <i class="far fa-heart"></i> 100 Likes .
+          <i class="far fa-comment"></i> 20 Comment
+        </p>
+
+        <div class="info__buttons">
+          <button type="button" class="info__btn--readmore">Readmore</button>
+          <div class="info__social">
+            <div class="c-social-media">
+              <a href="#" class="social-media__link">
+                <i class="fab fa-facebook-f social-media__icon"></i>
+              </a>
+              <a href="#" class="social-media__link">
+                <i class="fab fa-twitter social-media__icon"></i>
+              </a>
+              <a href="#" class="social-media__link">
+                <i class="fab fa-instagram social-media__icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info">
+        <p class="info__subtitle">FOOD and TRAVEL</p>
+        <p class="info__title">
+          And what falls, is fallen And what falls, is fallen... Bruce Wayne
+        </p>
+        <p class="info__solial-comments">
+          March 22, 2017 . <i class="far fa-heart"></i> 100 Likes .
+          <i class="far fa-comment"></i> 20 Comment
+        </p>
+
+        <div class="info__buttons">
+          <button type="button" class="info__btn--readmore">Readmore</button>
+          <div class="info__social">
+            <div class="c-social-media">
+              <a href="#" class="social-media__link">
+                <i class="fab fa-facebook-f social-media__icon"></i>
+              </a>
+              <a href="#" class="social-media__link">
+                <i class="fab fa-twitter social-media__icon"></i>
+              </a>
+              <a href="#" class="social-media__link">
+                <i class="fab fa-instagram social-media__icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bar__subcontaner bar__type-2  wait-for-animate  hide--left">
+    <div class="c-overlap">
+      <img
+        src="img/overlap__img6.jpg"
+        alt="field"
+        class="overlap__img overlap__img--shadow2"
+      />
+    </div>
+    <div class="info">
+      <p class="info__subtitle">lifestyle</p>
+      <div class="info__title">
+        The Vermont Delegation Mourns the Sanders <br />
+        Campaign
+        <p class="info__solial-comments">
+          March 22, 2017 . <i class="far fa-heart"></i> 100 Likes .
+          <i class="far fa-comment"></i> 20 Comment
+        </p>
+      </div>
+
+      <div class="info__buttons">
+        <button type="button" class="info__btn--readmore">Readmore</button>
+        <div class="info__social">
+          <div class="c-social-media">
+            <a href="#" class="social-media__link">
+              <i class="fab fa-facebook-f social-media__icon"></i>
+            </a>
+            <a href="#" class="social-media__link">
+              <i class="fab fa-twitter social-media__icon"></i>
+            </a>
+            <a href="#" class="social-media__link">
+              <i class="fab fa-instagram social-media__icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </section>
+      <section class="c-block_3">
+  <div class="block-3__row">
+    <img
+      src="img/block3__img1.jpg"
+      alt="image abstraction"
+      class="block-3__img wait-for-animate hide--top"
+    />
+    <img
+      src="img/block3__img2.jpg"
+      alt="image abstraction"
+      class="block-3__img wait-for-animate hide--bottom"
+    />
+    <img
+      src="img/block3__img3.jpg"
+      alt="image abstraction"
+      class="block-3__img wait-for-animate hide--top"
+    />
+    <img
+      src="img/block3__img4.jpg"
+      alt="image abstraction"
+      class="block-3__img wait-for-animate hide--bottom"
+    />
+  </div>
+  <div class="block-3__row">
+    <img
+      src="img/block3__img5.jpg"
+      alt="image abstraction"
+      class="block-3__img wait-for-animate hide--bottom"
+    />
+    <img
+      src="img/block3__img6.jpg"
+      alt="image abstraction"
+      class="block-3__img wait-for-animate hide--top"
+    />
+    <img
+      src="img/block3__img7.jpg"
+      alt="image abstraction"
+      class="block-3__img wait-for-animate hide--bottom"
+    />
+    <img
+      src="img/block3__img8.jpg"
+      alt="image abstraction"
+      class="block-3__img wait-for-animate hide--top"
+    />
+  </div>
+</section>
+
+      <section class="c-block_4">
+    <div class="c-social-media">
+        <a href="#" class="social-media__link">
+            <i class="fab fa-facebook-f social-media__icon"></i>
+            <span class="social-media__text">FACEBOOK</span>
+        </a>
+        <a href="#" class="social-media__link">
+            <i class="fab fa-twitter social-media__icon"></i>
+            <span class="social-media__text">Twitter</span>
+        </a>
+        <a href="#" class="social-media__link">
+            <i class="fab fa-google-plus-g social-media__icon"></i>
+            <span class="social-media__text">GOOGLE +</span>
+        </a>
+        <a href="#" class="social-media__link">
+            <i class="fab fa-linkedin-in social-media__icon"></i>
+            <span class="social-media__text">Linkedin</span>
+        </a>
+        <a href="#" class="social-media__link">
+            <i class="fab fa-instagram social-media__icon"></i>
+            <span class="social-media__text">Instagram</span>
+        </a>
+        <a href="#" class="social-media__link">
+            <i class="fab fa-vimeo-v social-media__icon"></i>
+            <span class="social-media__text">VIMEO</span>
+        </a>
+        <a href="#" class="social-media__link">
+            <i class="fab fa-youtube social-media__icon"></i>
+            <span class="social-media__text">YOUTOBE</span>
+        </a>
+    </div>
+</section>
+    </div>
+    <footer>
+    <div class="c-footer">
+        <div class="с-logo wait-for-animate">
+            <svg height="110" viewBox="0 0 241 110" width="241" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                    <path d="M 1080.1 125.2 l 1.6 4.5 h 5.3 l -4.3 2.8 l 1.6 4.5 l -4.3 -2.8 l -4.3 2.8 l 1.6 -4.5 l -4.3 -2.8 h 5.3 z"
+                        id="26paa" />
+                    <path d="M 852.9 125.2 l 1.6 4.5 h 5.3 l -4.3 2.8 l 1.6 4.5 l -4.3 -2.8 l -4.3 2.8 l 1.6 -4.5 l -4.3 -2.8 h 5.3 z"
+                        id="26pab" />
+                    <path d="M 1031.3 117 s -3.4 -9 -11.5 -4.8 c -2.4 1.2 -6.9 5 -12.1 9.6 c -10.4 -13.4 -26.9 -34 -32.7 -38.1 c -8.8 -6.1 -14.4 4 -14.4 4 l -36.2 30.4 c -3.4 -2.9 -6.3 -5.1 -8 -6 c -8.1 -4.2 -11.5 4.8 -11.5 4.8 L 867.5 158.4 h 21.5 c 0.7 -0.6 1.3 -1.2 1.8 -1.6 c 11.5 -10.3 1.3 -6.6 2  -8.4 c 0.7 -1.8 4.1 -6.6 8.1 -6 c 4.1 0.6 9.5 -0.6 12.2 -3.6 c 2.7 -3 0.7 -3.6 6.1 -7.8 c 5.4 -4.2 7.4 2.4 14.9 10.9 c 7.4 8.4 23.7 7.8 23.7 7.8 s -9.1 -9.1 -18.9 -18.4 c 12.2 -8.8 0.9 -6.3 2 -8.3 c 1.1 -2 6 -7.2 10.6 -5.9 c 4.7 1.3 11.2 0.6 15 -2.5 c 3.7 -3.2 1.4 -4.2 8.6 -8.3 c 7.1 -4.2 8.3 3.9 15.5 14.9 c 2.3 3.5 5.8 6.1 9.6 7.9 c -10.7 10 -21.3 20.7 -21.3 20.7 s 16.2 0.6 23.6 -7.8 c 7.4 -8.4 9.5 -15.1 14.9 -10.9 c 5.4 4.2 3.4 4.8 6.1 7.8 c 2.7 3 8.1 4.2 12.2 3.6 c 4.1 -0.6 7.4 4.2 8.1 6 c 0.7 1.8 -9.5 -1.8 2 8.4 c 0.5 0.4 1.1 0.9 1.8 1.6 h 21.5 z"
+                        id="26pac" />
+                </defs>
+                <g>
+                    <g transform="matrix(1,0,0,1,-836.7,-81)">
+                        <g>
+                            <use fill="#ffffff" transform="matrix(1,0,0,1,-9.6,32.3)" xlink:href="#26paa" />
+                        </g>
+                        <g>
+                            <use fill="#ffffff" transform="matrix(1,0,0,1,-9.6,32.3)" xlink:href="#26pab" />
+                        </g>
+                        <g>
+                            <use fill="#ffffff" transform="matrix(1,0,0,1,-9.6,32.3)" xlink:href="#26pac" />
+                        </g>
+                    </g>
+                </g>
+                <g>
+                    <path d="M 12 80 C 30 -15 205 -15 233 80" fill="transparent" id="curve" />
+                    <text dx="0 5 5 5 5 5 5 5 5 5 6 5 7 5 5 5 7 5 6 5 5 5 5 5 5 5" font-weight="400" font-family="'Ostrich Sans', 'Franklin Gothic Medium', sans-serif"
+                        font-size="12" x="18" y="0">
+                        <textPath fill="#000000" xlink:href="#curve">
+                            INSPIRE THE WORLD EVERYDAY
+                        </textPath>
+                    </text>
+                </g>
+            </svg>
+            <p class="logo__text js-fonts--hide">TRAVELGRAM</p>
+        </div>
+        <div class="c-footer--inner">
+            <nav class="c-menu">
+                <a href="#" class="menu__link  wait-for-animate hide--left">home</a>
+                <a href="#" class="menu__link  wait-for-animate hide--left">featured</a>
+                <a href="#" class="menu__link  wait-for-animate hide--left">BLOGS</a>
+                <a href="#" class="menu__link  wait-for-animate hide--right">GALLERY</a>
+                <a href="#" class="menu__link  wait-for-animate hide--right">categories</a>
+                <a href="#" class="menu__link  wait-for-animate hide--right">contact</a>
+            </nav>
+        </div>
+        <button class="footer__btn wait-for-animate">
+            <a href="#top" alt="to top" class="footer__btn__link"><i class="fas fa-angle-up"></i></a>
+        </button>
+    </div>
+    <div class="c-footer--small c-footer--white  wait-for-animate hide--left">
+        TravelGram Designed By Natalia Zhydejkina
+    </div>
+</footer>
 <script src="js/bundle.js"></script>
 </body>
 
