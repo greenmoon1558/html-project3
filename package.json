@@ -9,7 +9,7 @@
     "beautify": "html dist/*.html --indent-size 2",
     "build": "webpack --mode production",
     "watch": "webpack --mode development --watch",
-    "start": "webpack-dev-server --mode development --open --host 192.168.0.103"
+    "start": "webpack-dev-server --mode development --open --host 192.168.1.249"
   },
   "repository": {
     "type": "git",

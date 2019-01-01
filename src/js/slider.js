@@ -1,3 +1,5 @@
+import throttle from "./throttle";
+
 class Slider {
   constructor(slider) {
     this.sliderContainer = slider.querySelector(".slider__wrapper");
@@ -7,39 +9,27 @@ class Slider {
     this.peas = [...slider.querySelectorAll(".pea")];
     this.arrows = [...slider.querySelectorAll(".slider__btn")];
     this.peas.forEach(
-      (item, i) => (item.onclick = this.throttle(() => this.clickPea(i), 100))
+      (item, i) => (item.onclick = throttle(() => this.clickPea(i), 100))
     );
     this.arrows.forEach(
-      (item, i) => (item.onclick = this.throttle(() => this.click(i), 100))
+      (item, i) => (item.onclick = throttle(() => this.click(i), 100))
     );
     this.sliderContainer.addEventListener(
       "touchstart",
-      this.throttle(this.touchstart.bind(this))
+      throttle(this.touchstart.bind(this))
     );
     this.sliderContainer.addEventListener(
       "touchmove",
-      this.throttle(this.touchmove.bind(this))
+      throttle(this.touchmove.bind(this))
     );
     document.addEventListener(
       "touchend",
-      this.throttle(this.touchend.bind(this))
+      throttle(this.touchend.bind(this))
     );
-    window.addEventListener("resize", this.throttle(this.init.bind(this)));
-
+    window.addEventListener("resize", this.init.bind(this));
     this.init();
   }
-  throttle(func, limit) {
-    let inThrottle;
-    return function() {
-      const args = arguments;
-      const context = this;
-      if (!inThrottle) {
-        func.apply(context, args);
-        inThrottle = true;
-        setTimeout(() => (inThrottle = false), limit);
-      }
-    };
-  }
+
   init() {
     this.current = 0;
   }
@@ -88,6 +78,7 @@ class Slider {
     }
   }
   move() {
+
     let displacement = this.displacement;
     this.sliderContainer.style.transform = `translateX(-${displacement *
       this.current}%`;

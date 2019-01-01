@@ -1,7 +1,9 @@
 .с-header {
-  max-width: 119rem;
+  max-width: 120rem;
   margin: 0 auto;
   display: grid;
+  padding: 0 0.5rem;
+  z-index: 2;
   &-- {
     &big {
       height: 250px;
@@ -11,6 +13,16 @@
     &small {
       height: 60px;
       grid-template-columns: repeat(2, auto);
+    }
+  }
+  &-bar,
+  &-bar-legend {
+    display: none;
+  }
+  .c-social-media {
+    &.animate {
+      animation: from-right 1s ease-in-out 1 forwards;
+      will-change: transform;
     }
   }
 }
@@ -35,9 +47,13 @@
       align-self: center;
       justify-self: flex-start;
       grid-row: 2;
+      &.animate {
+        animation: from-left 1s ease-in-out 1 forwards;
+        will-change: transform;
+      }
     }
     &input {
-      width: 15rem;
+      width: 16rem;
       border: 0.1rem solid $white;
       padding: 5px 0.5rem;
       border-radius: 2px;
@@ -47,11 +63,13 @@
         font-family: $fontMerriweatherLightItalic;
         font-size: 1.4rem;
         letter-spacing: 0.01rem;
+        word-spacing: 3px;
         font-weight: 300;
         font-style: italic;
       }
       &:focus,
       &:hover {
+        transition: 0.5s;
         border: 0.1rem solid rgba($inputGray, 0.5);
       }
     }
@@ -70,6 +88,10 @@
   justify-self: center;
   align-self: top;
   margin-left: 15px;
+      &.animate {
+      animation: rotate 1s ease-in-out 1 alternate-reverse;
+      will-change: transform;
+    }
   .logo__text {
     margin: -10px 0 0 0;
     color: $logoGray;
@@ -77,6 +99,7 @@
     font-size: 6.5rem;
     font-weight: 400;
     letter-spacing: 0.26rem;
+    word-spacing: 3px;
     text-transform: uppercase;
   }
 }
@@ -94,21 +117,33 @@
     width: 15.3rem;
     text-transform: uppercase;
     letter-spacing: 0.275rem;
+    word-spacing: 3px;
     border-radius: 2px;
     border: 0.1rem solid rgba($subscribeBlack, 0.1);
     background-color: $white;
     padding: 0px;
+    &.animate {
+      animation: from-right 1s ease-in-out 1 forwards;
+      will-change: transform;
+    }
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: darken($white, 10%);
+      transition: 0.25s;
+    }
   }
 }
+
 .c-social-media {
   justify-self: flex-end;
   align-self: center;
   height: 100%;
   .social-media__ {
     &icon {
-     margin: 25px 10px 20px 20px;
+      margin: 25px 10px 20px 20px;
     }
-    &link:nth-child(3){
+    &link:nth-child(3) {
       .social-media__icon {
         margin-right: 2px;
       }
@@ -122,6 +157,7 @@
       &:focus,
       &:hover,
       &:active {
+        transition: 0.5s;
         color: $black;
         outline: none;
         background: none;
@@ -146,7 +182,10 @@
 }
 
 .c-menu {
-  margin-left: 7px;
+  &.animate {
+    animation: from-left 1s ease-in-out 1 forwards;
+    will-change: animation;
+  }
   .menu__link,
   .menu__link:link {
     justify-self: flex-start;
@@ -161,13 +200,15 @@
     &:focus,
     &:hover,
     &:active {
+      transition: 0.5s;
       color: $yellow;
       outline: none;
       background: none;
     }
     letter-spacing: 0.001rem;
+    word-spacing: 3px;
   }
-  .menu__link:nth-child(1){
-     padding-right: 6.3rem;
-    }
+  .menu__link:nth-child(1) {
+    padding-right: 6.3rem;
+  }
 }

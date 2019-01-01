@@ -1,6 +1,6 @@
-<header>
+<header id="top">
   <div class="с-header с-header--big">
-    <form action="post" class="search__form">
+    <form action="post" class="search__form wait-for-animate  hide--left">
       <input
         type="search"
         id="search"
@@ -9,7 +9,7 @@
       />
       <div class="search--inner"><i class="fas fa-search search__icon"></i></div>
     </form>
-    <div class="с-logo">
+    <div class="с-logo wait-for-animate">
       <svg
         height="110"
         viewBox="0 0 241 110"
@@ -79,20 +79,27 @@
       <p class="logo__text js-fonts--hide">TRAVELGRAM</p>
     </div>
     <div class="с-subscribe">
-      <button type="button" class="subscribe__button">SubScribe</button>
+      <button type="button" class="subscribe__button  wait-for-animate  hide--right">SubScribe</button>
     </div>
   </div>
   <hr class="header__horizontal-line" />
   <div class="с-header с-header--small">
-    <nav class="c-menu">
+    <nav class="c-menu wait-for-animate  hide--left">
+    <input type="checkbox" name="bar-checkbox" class="с-header-bar" id="burgger" />
+    <label for="burgger" class="с-header-bar-legend">
+      <i class="fas fa-bars bar__icon"></i>
+      <i class="fas fa-times bar__icon"></i>
+    </label>
+    <div class="menu-items">
       <a href="#" class="menu__link">home</a>
       <a href="#" class="menu__link">featured</a>
       <a href="#" class="menu__link">BLOGS</a>
       <a href="#" class="menu__link">GALLERY</a>
       <a href="#" class="menu__link">categories</a>
       <a href="#" class="menu__link">contact</a>
+    </div>
     </nav>
-    <div class="c-social-media">
+    <div class="c-social-media  wait-for-animate  hide--right">
       <a href="#" class="social-media__link">
         <i class="fab fa-facebook-f social-media__icon"></i>
       </a>

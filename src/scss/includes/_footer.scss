@@ -1,0 +1,97 @@
+.c-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $footerBackground;
+  position: relative;
+  &-- {
+    &small {
+      text-align: right;
+      margin: 2.2rem;
+      color: $footerBlack;
+      font-family: $fontHelvetica;
+      font-size: 2.7rem;
+      font-weight: 400;
+      letter-spacing: 0.216rem;
+      word-spacing: 3px;
+      &.hide--left.animate {
+        animation: from-left 1s ease-in-out 1 forwards;
+        will-change: transform;
+      }
+    }
+  }
+  .с-logo {
+    margin: 50px 0 -5px 0px;
+    .logo__text {
+      color: $white;
+    }
+  }
+  &--inner {
+    max-width: 78rem;
+    margin-bottom: 50px;
+    .c-menu {
+      display: flex;
+      align-content: space-between;
+      .menu__link {
+        &.hide--left.animate {
+          animation: from-left 1s ease-in-out 1 forwards;
+          will-change: transform;
+        }
+        &.hide--right.animate {
+          animation: from-right 1s ease-in-out 1 forwards;
+          will-change: transform;
+        }
+      }
+    }
+  }
+  .footer__btn {
+    font-size: 2.25rem;
+    opacity: 0;
+    &.animate {
+        animation: opasity 2s ease-in-out 1s 1 forwards;
+        will-change: opasity;
+      }
+    &:focus,
+    &:hover,
+    &:active {
+      .fas {
+        font-size: 2.5rem;
+      }
+    }
+    position: absolute;
+    height: 7.5rem;
+    border: none;
+    background-color: $white;
+    width: 10rem;
+    bottom: -4rem;
+    &__link {
+      text-decoration: none;
+      color: $black;
+    }
+    &:before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 0px;
+      bottom: 0;
+      margin-bottom: 3px;
+      border-bottom: 13px solid $red;
+      border-right: 13px solid transparent;
+    }
+    &:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      margin-bottom: 3px;
+      border-bottom: 13px solid $red;
+      border-left: 13px solid transparent;
+    }
+  }
+}
+

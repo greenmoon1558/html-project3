@@ -1,0 +1,20 @@
+@media (max-width: 48rem) {
+  .с-header {
+    &--big {
+      grid-template-columns: 1fr;
+      height: auto;
+      grid-template-rows: repeat(3, 1fr);
+      .с-logo{
+          margin: 0;
+      }
+      .с-subscribe,
+      .search__form {
+        grid-row: auto;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+      }
+    }
+  }
+}

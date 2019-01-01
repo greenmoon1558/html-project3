@@ -1,0 +1,54 @@
+.c-block_4 {
+    background-color: $white;
+  .c-social-media {
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      max-width: 115rem;
+      margin: 5rem auto;
+  }
+  .social-media {
+    &__ {
+      &link {
+        text-decoration: none;
+        color: $block2textBlack;
+      }
+      &icon {
+        margin: 0rem 2.1rem 0rem;
+        &:focus,
+        &:hover,
+        &:active {
+          color: $black;
+          outline: none;
+          background: none;
+          .fa-facebook-f {
+            color: $facebookColor;
+          }
+          .fa-twitter,
+          .fa-vimeo-v {
+            color: $twitterColor;
+          }
+          .fa-linkedin-in {
+            color: $linkedinColor;
+          }
+          .fa-google-plus-g {
+            color: $google-plusColor;
+          }
+          .fa-instagram {
+            color: $instagramColor;
+          }
+          .fa-youtube {
+            color: $youtubeColor;
+          }
+        }
+      }
+      &text {
+        color: $block2textBlack;
+        font-family: $fontMyriadPro;
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

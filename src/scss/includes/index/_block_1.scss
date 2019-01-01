@@ -5,6 +5,7 @@
     position: relative;
     height: calc(100vh - 314px);
     min-height: 886px;
+    z-index: 1;
     overflow: hidden;
     @keyframes sliderLeftPanel {
       form {
@@ -24,7 +25,7 @@
       animation-name: sliderLeftPanel;
       transform: skew(31.25deg) scale(0.7, 0.7) translateX(-170%);
       animation-timing-function: ease-in;
-      animation-duration: 0.3s;
+      animation-duration: 1s;
       animation-delay: 2s;
       animation-fill-mode: forwards;
     }
@@ -106,6 +107,7 @@
         font-size: 4.8rem;
         font-weight: 300;
         letter-spacing: -0.125rem;
+        word-spacing: 3px;
       }
       &--small {
         color: $white;
@@ -115,6 +117,7 @@
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: -0.16rem;
+        word-spacing: 3px;
         &::before {
           content: "";
           display: block;
@@ -160,6 +163,7 @@
       margin: 0;
       font-weight: 400;
       letter-spacing: -1.75px;
+      word-spacing: 3px;
       text-transform: uppercase;
     }
     &__headline--big {
@@ -169,6 +173,7 @@
       font-weight: 400;
       text-transform: uppercase;
       letter-spacing: -1.52px;
+      word-spacing: 3px;
       margin: -8px 0 0 0;
     }
     &__paragraph {
@@ -178,6 +183,7 @@
       font-weight: 400;
       margin: 6px 0 35px;
       letter-spacing: 1px;
+      word-spacing: 3px;
     }
     &__button {
       color: $black;
@@ -187,6 +193,7 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: -2px;
+      word-spacing: 3px;
       width: 15rem;
       height: 4.5rem;
       background-color: $yellow;

@@ -5,9 +5,8 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
     />
-
     <link rel="shortcut icon" href="favicon/favicon.ico" />
     <link rel="stylesheet" href="css/style.bundle.css" />
     <link
@@ -21,8 +20,13 @@
   <body>
     <%= _.template(require('./../includes/header.html'))() %>
     <div class="home-page">
-      <%= _.template(require('./../includes/index/block_1.html'))() %> 
-      <%= _.template(require('./../includes/index/block_2.html'))() %>
+      <%= _.template(require('./../includes/index/block_1.html'))() %>
+      <section class="c-block_2">
+        <%= _.template(require('./../includes/index/block_2--left.html'))() %>
+        <%= _.template(require('./../includes/index/block_2--right.html'))() %>
+      </section>
+      <%= _.template(require('./../includes/index/block_3.html'))() %>
+      <%= _.template(require('./../includes/index/block_4.html'))() %>
     </div>
     <%= _.template(require('./../includes/footer.html'))() %>
   </body>

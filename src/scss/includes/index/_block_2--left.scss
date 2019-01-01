@@ -1,15 +1,33 @@
 .c-block_2 {
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(45rem, 31.5%) 1fr; //60.6rem
-  grid-column-gap: 3.4rem;
+  grid-template-columns: minmax(45rem, 31.5%) minmax(
+      calc(100vw - 45rem - 2.8%),
+      65.7%
+    );
+  // grid-template-columns: 45rem 1fr;
+  grid-column-gap: 1.2%;
   margin-top: 41px;
-  margin-left: 12px;
+  margin-left: 1.6%;
   .bar {
     &-- {
-      &right {
-      }
       &left {
+        &.animate {
+          animation: from-left 1s ease-in-out 1 forwards;
+          will-change: transform;
+        }
+      }
+      &right {
+        .bar__subcontaner{
+          &.hide--left.animate {
+          animation: from-left 0.5s ease-in-out 1 forwards;
+          will-change: transform;
+        }
+        &.hide--right.animate {
+          animation: from-right 0.5s ease-in-out 1 forwards;
+          will-change: transform;
+        }
+        }
       }
       &inner {
         width: 100%;
@@ -26,14 +44,14 @@
         margin-top: 0;
         display: inline-block;
         background-color: $white;
-        letter-spacing: 5px;
+        letter-spacing: 0.5rem;
       }
       padding: 1rem 0 0 0;
       margin: 0;
       color: $block2HeadlineBlock;
       font-family: $fontPompiere;
       font-weight: 700;
-      font-size: 5rem;
+      font-size: 2.6vw;
       display: flex;
       justify-content: center;
       text-align: center;
@@ -55,11 +73,12 @@
       &--strong {
         font-family: $fontMyriadPro;
         text-transform: uppercase;
-        font-size: 3rem;
+        font-size: 1.5625vw;
         padding: 3.2rem 0 0 0;
         .bar__headline--inner {
           width: 40%;
-          letter-spacing: -1.5px;
+          letter-spacing: -0.15rem;
+          word-spacing: 3px;
         }
         &:before {
           margin-top: 15px;
@@ -71,7 +90,7 @@
     height: 893px;
     margin-bottom: 43px;
     .map {
-      background-color: yellow;
+      background-color: $yellow;
       height: calc(100% - 130px);
       width: calc(100% - 4.5rem);
       margin: 0 21px 41px 22px;
@@ -103,9 +122,10 @@
           width: 77.5%;
           color: $block2textBlack;
           font-family: $fontMyriadPro;
-          font-size: 2.5rem;
+          font-size: 1.3vw;
           line-height: 40.1px;
           letter-spacing: 0.035rem;
+          word-spacing: 3px;
           font-weight: 400;
           margin: 0 auto;
           text-align: center;
@@ -115,7 +135,7 @@
           text-align: center;
           color: $block2textBlack;
           font-family: $fontNeoteric;
-          font-size: 3.6rem;
+          font-size: 1.875vw;
           letter-spacing: 0.7rem;
           font-style: normal;
           font-weight: 700;
@@ -142,11 +162,10 @@
         margin: 0px 24px 12px 20px;
       }
       .fab {
-        font-size: 40px;
+        font-size: 2.83vw;
       }
     }
   }
-
   .c-newsletter {
     margin-bottom: 40px;
     .newsletter__headline {
@@ -167,7 +186,7 @@
       border: none;
       border-bottom: 1px solid $subscribeBlack;
       font-family: $fontMerriweatherLightItalic;
-      font-size: 2.25rem;
+      font-size: 1.172vw;
       width: 100%;
       font-weight: 400;
       padding: 2.5rem 1rem 1.5rem;
@@ -181,10 +200,10 @@
       background-color: $block2HeadlineGray;
       color: $white;
       font-family: $fontDosisSemiBold;
-      font-size: 2rem;
+      font-size: 1.42vw;
       font-weight: 400;
       text-transform: uppercase;
-      letter-spacing: 2.8px;
+      letter-spacing: 0.28rem;
     }
   }
   .c-categories {
@@ -211,14 +230,18 @@
         }
         &item {
           letter-spacing: 0.6rem;
+          word-spacing: 3px;
           color: $socialGray;
           font-family: $fontMyriadPro;
-          font-size: 2.2rem;
+          font-size: 1.146vw;
           font-weight: 400;
           text-align: center;
           padding: 1rem 0;
           height: 55px;
           border-bottom: 2px solid rgba($subscribeBlack, 0.1);
+          &:focus, &:hover{
+            font-size: 1.24vw;;
+          }
         }
         &item:last-child {
           border-bottom: none;
@@ -235,7 +258,7 @@
       &__ {
         &list {
           margin: 0;
-          padding: 5% 0 5% 3%;
+          padding: 5% 3%;
         }
         &item {
           max-height: 10rem;
@@ -255,7 +278,7 @@
         }
         &title {
           color: $block2PostBlack;
-          font-size: 3rem;
+          font-size: 1.5625vw;
           font-weight: 400;
           font-family: $fontOpenSans;
           grid-area: title;
@@ -265,7 +288,7 @@
           margin: 0;
           color: $inputGray;
           font-family: $fontMyriadPro;
-          font-size: 2rem;
+          font-size: 1.042vw;
           font-weight: 400;
           grid-area: date;
         }
@@ -274,6 +297,7 @@
   }
   .c-tags {
     margin-bottom: 40px;
+    min-height: 35rem;
     .bar__headline--inner {
       width: 35%;
     }
@@ -282,30 +306,30 @@
         padding: 3.5rem 0 0;
       }
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-column-gap: 19%;
+      grid-template-columns: repeat(2, min-content);
+      justify-content: space-between;
       grid-row-gap: 12.5%;
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: repeat(3, min-content);
       padding: 2% 6.75% 10% 5%;
     }
     .tag {
       border: 3px solid $yellow;
       color: $subscribeBlack;
       font-family: $fontMyriadPro;
-      font-size: 3.4rem;
+      font-size: 1.77vw;
       font-weight: 400;
       text-transform: uppercase;
-      padding: 5px 5px 5px 10px;
-      letter-spacing: 0.25rem;
+      padding: 0.2vw 0.2vw 0.2vw 0.1vw;
+      letter-spacing: 0.125vw;
+      word-spacing: 3px;
       margin: 0;
     }
   }
-
   .c-contact-me {
     .contact {
       &__ {
         &form {
-             display: flex;
+          display: flex;
           flex-direction: column;
           align-items: center;
           padding: 8% 6% 4% 9%;
@@ -313,8 +337,8 @@
         &name,
         &email,
         &textarea {
-            width: 100%;
-            color: $block2ContactGray;
+          width: 100%;
+          color: $block2ContactGray;
           font-family: $fontOpenSans;
           font-size: 1.3rem;
           font-weight: 400;
@@ -324,12 +348,12 @@
           margin-bottom: 2.5%;
         }
         &textarea {
-            height: 19.5rem;
+          height: 19.5rem;
         }
         &button {
           color: $block2ContactBlack;
           font-family: $fontOpenSans;
-          font-size: 4.3rem;
+          font-size: 2.24vw;
           font-weight: 400;
           border: none;
           padding: 0 1rem;

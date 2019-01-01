@@ -1,0 +1,14 @@
+@media (max-width: 90rem) {
+  .c-footer {
+    &--inner{
+width: 66%;
+    }
+    .c-menu {
+      justify-content: space-between;
+      .menu__link,
+      .menu__link:link {
+        padding: 23px 1.5rem 18px;
+      }
+    }
+  }
+}

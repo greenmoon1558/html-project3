@@ -1,0 +1,17 @@
+@media (max-width: 64rem) {
+  .c-block_4 {
+    .c-social-media {
+        margin: 5rem 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        .social-media__link:nth-child(3) .social-media__icon{
+          margin-right: 2.1rem;
+        }
+       .social-media__link, 
+         .social-media__link:link{
+            min-width: 15rem;
+            margin: 1rem 0;
+         }
+    }
+  }
+}

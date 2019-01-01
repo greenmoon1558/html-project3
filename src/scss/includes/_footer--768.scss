@@ -1,0 +1,10 @@
+@media (max-width: 48rem) {
+  .c-footer {
+    &--small{
+      text-align: center;
+    }
+    .c-menu {
+      flex-direction: column;
+    }
+  }
+}

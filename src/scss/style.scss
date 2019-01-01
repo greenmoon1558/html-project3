@@ -6,16 +6,34 @@ $font-stack: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu
 html {
   font-size: 62.5%;
   overscroll-behavior-y: contain;
+  scroll-behavior: smooth;
 }
 @import "./fonts";
 @import "./vars";
+@import "./animation";
 
 @import "./includes/header";
 @import "./includes/index/block_1";
+@import "./includes/index/block_1--768";
 @import "./includes/index/block_2--left";
 @import "./includes/index/block_2--right";
+@import "./includes/index/block_3";
+@import "./includes/index/block_4";
 @import "./includes/footer";
+@import "./includes/footer--1440";
+@import "./includes/footer--1024";
+@import "./includes/footer--768";
 
+@import "./includes/header--1024";
+@import "./includes/header--768";
+@import "./includes/index/block_2--1440";
+@import "./includes/index/block_2--1024";
+@import "./includes/index/block_2--768";
+@import "./includes/index/block_3--1024";
+@import "./includes/index/block_3--768";
+@import "./includes/index/block_4--1440";
+@import "./includes/index/block_4--1024";
+@import "./includes/index/block_4--768";
 * {
   box-sizing: border-box;
   -webkit-touch-callout: none;

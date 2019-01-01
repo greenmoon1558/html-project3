@@ -1,0 +1,26 @@
+@media (max-width: 48rem) {
+  .c-block_1 {
+    .c-slider-info__wrapper {
+      left: 0rem;
+      transform: skew(0deg);
+      padding: 3rem;
+      width: 100vw;
+      &--background {
+        background-color: rgba($subscribeBlack, 0.4);
+        animation-name: leftPanel;
+      }
+    }
+    .slider__info--bottom {
+      grid-template-areas: "title" "buttons" "text";
+      grid-template-columns: 1fr;
+      width: auto;
+      top: 200px;
+      position: relative;
+    }
+  }
+  @keyframes leftPanel {
+    100% {
+      transform: skew(0deg) scale(1) translateX(-0%);
+    }
+  }
+}

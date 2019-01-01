@@ -1,0 +1,30 @@
+.c-block_3 {
+  margin-top: 2.1vw;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 3.3rem;
+  .block-3 {
+    &__ {
+      &row {
+          &:nth-child(2n+1){
+  box-shadow: 0 1.1rem 1.6rem 0.2rem rgba($black, 0.33);
+          }
+        display: grid;
+        grid-template-columns: repeat(4, 25vw);
+      }
+      &img {
+        width: 25vw;
+        height: auto;
+        object-fit: cover;
+         &.hide--top.animate {
+          animation: to-top 1s ease-in-out 1 forwards;
+          will-change: transform;
+        }
+         &.hide--bottom.animate {
+          animation: to-bottom 1s ease-in-out 1 forwards;
+          will-change: transform;
+        }
+      }
+    }
+  }
+}

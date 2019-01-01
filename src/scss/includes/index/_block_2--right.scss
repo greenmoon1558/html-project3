@@ -1,0 +1,137 @@
+.c-block_2 {
+  .bar__type-1 {
+    background-color: $white;
+    height: 45rem;
+    display: grid;
+    &:nth-child(2n + 1) {
+      grid-template-columns: 1fr minmax(max-content, 60.75rem);
+      margin-left: 1rem;
+      margin-bottom: 10vw;
+      grid-column-gap: 4.8vw;
+    }
+    &:nth-child(2n) {
+      grid-template-columns: minmax(max-content, 57.25rem) 1fr;
+      grid-column-gap: 2vw;
+      padding-left: 0.5vw;
+      margin-bottom: 10vw;
+      .info {
+        padding: 15px 0rem 60px 3rem;
+        &__horizontal-line {
+          width: 27.25vw;
+        }
+        &__btn--readmore {
+          width: 16rem;
+        }
+      }
+    }
+    padding: 0 2.35vw 0 0.16vw;
+    .info {
+      grid-template-rows: repeat(3, min-content) 1fr min-content;
+      padding: 37px 0rem 37px 3rem;
+      &__ {
+        &social {
+        }
+        &title {
+          width: 90%;
+          margin: 15px 0 0px 0;
+        }
+        &horizontal-line {
+          width: 26.25vw;
+          margin-left: 0;
+        }
+        &text {
+          margin: 20px 0px 10px 1rem;
+          width: 100%;
+        }
+        &buttons {
+          padding: 0 1.25vw 0.46vw 0.27vw;
+        }
+      }
+    }
+    .c-overlap {
+      top: -4.53125vw;
+      height: calc(100% + 15rem);
+    }
+  }
+  .bar__type-2 {
+    background-color: $white;
+    height: 89.4rem;
+    display: grid;
+    grid-template-rows: 1.75fr 1fr;
+    flex-direction: column;
+    margin: 11vw 1.1vw 5vw 0.5vw;
+    .info {
+      width: 100%;
+      padding: 22px 3.5rem 40px;
+      &__ {
+        &social {
+          margin: 0;
+        }
+        &title {
+          width: 100%;
+          position: relative;
+        }
+        &solial-comments {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+        &subtitle {
+          font-size: 3.1rem;
+          letter-spacing: 0.1rem;
+          word-spacing: 3px;
+        }
+        &btn--readmore {
+          margin: 2rem 0 0 0;
+          height: 5.8rem;
+          width: 18.5rem;
+        }
+      }
+    }
+  }
+  .bar__type-3__wrapper {
+    box-shadow: 0 1.9rem 2.6rem 0.3rem rgba($black, 0.18);
+    margin: 0px 1.1vw 70px 0.5vw;
+    &.hide--right.animate {
+          animation: from-right 0.5s ease-in-out 1 forwards;
+          will-change: transform;
+        }
+    .bar__type-3 {
+      box-shadow: none;
+      display: grid;
+      grid-template-rows: 57.5rem 42.5rem;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 4vw;
+      grid-row-gap: 1vw;
+    }
+    .overlap__button {
+      widows: 23.5vw;
+      transform: translate(-54%, -50%);
+    }
+    .info {
+      padding: 50px 3rem 42.5px 4rem;
+      &__ {
+        &title {
+          margin: 0;
+          text-align: center;
+          font-size: 1.45vw;
+          line-height: 2.5vw;
+        }
+        &subtitle {
+          text-align: center;
+          line-height: 0;
+        }
+        &solial-comments {
+          text-align: center;
+          font-size: 1.25vw;
+        }
+        &btn--readmore {
+          width: 18rem;
+          height: 5.5rem;
+        }
+      }
+    }
+  }
+
+  @import "./block_2--right__main-styles";
+}
