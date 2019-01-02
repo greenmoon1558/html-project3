@@ -23,7 +23,7 @@ const htmlPlugins = generateHtmlPlugins("./src/html/views");
 module.exports = {
   entry: ["babel-polyfill", "./src/js/index.js", "./src/scss/style.scss"],
   output: {
-    filename: "./js/bundle.js"
+    filename: "./bundle.js"
   },
   devtool: "source-map",
   module: {
@@ -97,13 +97,13 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin({
-      filename: "./css/style.bundle.css",
+      filename: "./style.bundle.css",
       allChunks: true
     }),
     new CopyWebpackPlugin([
       {
         from: "./src/fonts",
-        to: "./fonts"
+        to: "./"
       },
       {
         from: "./src/favicon",
