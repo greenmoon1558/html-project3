@@ -70,12 +70,12 @@ module.exports = {
                     browsers: ["> 1%", "ie 10"]
                   }),
                   require("cssnano")(),
-                  require("postcss-extract-media-query")({
-                    output: {
-                      path: path.join(__dirname, 'dist/css'), // emit to 'dist' folder in root
-                      name: '[query].css' // pattern of emited files
-                    }
-                  })
+                  // require("postcss-extract-media-query")({
+                  //   output: {
+                  //     path: path.join(__dirname, 'dist/css'), // emit to 'dist' folder in root
+                  //     name: '[query].css' // pattern of emited files
+                  //   }
+                  // })
                 ]
               }
             },
