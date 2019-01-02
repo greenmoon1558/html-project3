@@ -41,7 +41,9 @@ module.exports = {
       {
         test: /\.css$/,
         include: /node_modules/,
-        use: [{ loader: "css-loader" }]
+        use: [
+          { loader: "css-loader" },
+        ]
       },
       {
         test: /\.(sass|scss)$/,
@@ -51,7 +53,7 @@ module.exports = {
             {
               loader: "css-loader",
               options: {
-                sourceMap: true,
+                sourceMap: false,
                 minimize: true,
                 url: false
               }
@@ -61,19 +63,26 @@ module.exports = {
               options: {
                 ident: "postcss",
                 plugins: loader => [
+
                   require("postcss-import")({ root: loader.resourcePath }),
                   require("postcss-preset-env")(),
                   require("postcss-cssnext")({
                     browsers: ["> 1%", "ie 10"]
                   }),
-                  require("cssnano")()
+                  require("cssnano")(),
+                  require("postcss-extract-media-query")({
+                    output: {
+                      path: path.join(__dirname, 'dist/css'), // emit to 'dist' folder in root
+                      name: '[query].css' // pattern of emited files
+                    }
+                  })
                 ]
               }
             },
             {
               loader: "sass-loader",
               options: {
-                sourceMap: true
+                sourceMap: false
               }
             }
           ]
