@@ -149,10 +149,10 @@
   <div class="c-slider">
     <div class="slider__wrapper" style="transform: translateX(0%);">
       <div class="slider__item">
-        <img src="img/slider.jpg" class="slider__image" alt="night landscape" />
+        <img data-src="img/slider.jpg" src="img/placeholder-image1920X945.jpg" class="lazy slider__image" alt="night landscape" />
       </div>
       <div class="slider__item">
-        <img src="img/slider.jpg" class="slider__image" alt="night landscape" />
+        <img data-src="img/slider.jpg" src="img/placeholder-image1920X945.jpg" class="slider__image lazy" alt="night landscape" />
       </div>
     </div>
     <div class="c-slider-info__wrapper--background">
@@ -227,7 +227,7 @@
         <i class="fab fa-youtube social-media__icon"></i>
       </a>
     </div>
-    <img src="img/about-img.jpg" alt="eye" class="about__img" />
+    <img data-src="img/about-img.jpg" alt="eye" class="about__img lazy" src="img/placeholder-image605X500.jpg" />
   </div>
   <div class="c-newsletter  bar--inner">
     <p class="newsletter__headline bar__headline">
@@ -263,27 +263,27 @@
     <div class="posts">
       <ul class="post__list">
         <li class="post__item">
-          <img src="img/post-1.jpg" alt="post img" class="post__img" />
+          <img data-src="img/post-1.jpg" alt="post img" class="post__img lazy" src="img/placeholder-image185X105.jpg" />
           <p class="post__title">Travelling with your buddies.</p>
           <p class="post__date">July 25, 2016</p>
         </li>
         <li class="post__item">
-          <img src="img/post-2.jpg" alt="post img" class="post__img" />
+          <img data-src="img/post-2.jpg" alt="post img" class="post__img lazy" src="img/placeholder-image185X105.jpg" />
           <p class="post__title">Travelling with your buddies.</p>
           <p class="post__date">July 25, 2016</p>
         </li>
         <li class="post__item">
-          <img src="img/post-3.jpg" alt="post img" class="post__img" />
+          <img data-src="img/post-3.jpg" alt="post img" class="post__img lazy" src="img/placeholder-image185X105.jpg" />
           <p class="post__title">Travelling with your buddies.</p>
           <p class="post__date">July 25, 2016</p>
         </li>
         <li class="post__item">
-          <img src="img/post-4.jpg" alt="post img" class="post__img" />
+          <img data-src="img/post-4.jpg" alt="post img" class="post__img lazy" src="img/placeholder-image185X105.jpg" />
           <p class="post__title">Travelling with your buddies.</p>
           <p class="post__date">July 25, 2016</p>
         </li>
         <li class="post__item">
-          <img src="img/post-5.jpg" alt="post img" class="post__img" />
+          <img data-src="img/post-5.jpg" alt="post img" class="post__img lazy" src="img/placeholder-image185X105.jpg" />
           <p class="post__title">Travelling with your buddies.</p>
           <p class="post__date">July 25, 2016</p>
         </li>
@@ -360,9 +360,10 @@
     </div>
     <div class="c-overlap">
       <img
-        src="img/overlap__img1.jpg"
+       src="img/placeholder-image605X605.jpg"
+        data-src="img/overlap__img1.jpg"
         alt="starry sky"
-        class="overlap__img overlap__img--shadow"
+        class="overlap__img overlap__img--shadow lazy"
       />
       <div class="overlap__info overlap__info--blue">
         <button type="button" class="overlap__button">Readmore</button>
@@ -376,9 +377,10 @@
   <div class="bar__subcontaner bar__type-1  wait-for-animate  hide--right">
     <div class="c-overlap">
       <img
-        src="img/overlap__img2.jpg"
+       src="img/placeholder-image605X605.jpg"
+        data-src="img/overlap__img2.jpg"
         alt="field"
-        class="overlap__img overlap__img--shadow"
+        class="overlap__img overlap__img--shadow lazy"
       />
     </div>
     <div class="info">
@@ -411,9 +413,10 @@
   <div class="bar__subcontaner bar__type-2  wait-for-animate  hide--left">
     <div class="c-overlap">
       <img
-        src="img/overlap__img3.jpg"
+       src="img/placeholder-image1270X570.jpg"
+        data-src="img/overlap__img3.jpg"
         alt="field"
-        class="overlap__img overlap__img--shadow2"
+        class="overlap__img overlap__img--shadow2 lazy"
       />
     </div>
     <div class="info">
@@ -449,9 +452,10 @@
     <div class="bar__subcontaner bar__type-3">
       <div class="c-overlap">
         <img
-          src="img/overlap__img4.jpg"
+         src="img/placeholder-image600X575.jpg"
+          data-src="img/overlap__img4.jpg"
           alt="starry sky"
-          class="overlap__img"
+          class="overlap__img lazy"
         />
         <div class="overlap__info overlap__info--mustard">
           <button type="button" class="overlap__button">Readmore</button>
@@ -463,9 +467,11 @@
       </div>
       <div class="c-overlap">
         <img
-          src="img/overlap__img5.jpg"
+         src="img/placeholder-image600X575.jpg"
+          class="lazy"
+          data-src="img/overlap__img5.jpg"
           alt="starry sky"
-          class="overlap__img"
+          class="overlap__img lazy"
         />
       </div>
 
@@ -528,9 +534,10 @@
   <div class="bar__subcontaner bar__type-2  wait-for-animate  hide--left">
     <div class="c-overlap">
       <img
-        src="img/overlap__img6.jpg"
+       src="img/placeholder-image1270X570.jpg"
+        data-src="img/overlap__img6.jpg"
         alt="field"
-        class="overlap__img overlap__img--shadow2"
+        class="overlap__img overlap__img--shadow2 lazy"
       />
     </div>
     <div class="info">
@@ -568,46 +575,54 @@
       <section class="c-block_3">
   <div class="block-3__row">
     <img
-      src="img/block3__img1.jpg"
+      src="img/placeholder-image.jpg"
+      data-src="img/block3__img1.jpg"
       alt="image abstraction"
-      class="block-3__img wait-for-animate hide--top"
+      class="block-3__img wait-for-animate hide--top lazy"
     />
     <img
-      src="img/block3__img2.jpg"
+      src="img/placeholder-image.jpg"
+      data-src="img/block3__img2.jpg"
       alt="image abstraction"
-      class="block-3__img wait-for-animate hide--bottom"
+      class="block-3__img wait-for-animate hide--bottom lazy"
     />
     <img
-      src="img/block3__img3.jpg"
+      src="img/placeholder-image.jpg"
+      data-src="img/block3__img3.jpg"
       alt="image abstraction"
-      class="block-3__img wait-for-animate hide--top"
+      class="block-3__img wait-for-animate hide--top lazy"
     />
     <img
-      src="img/block3__img4.jpg"
+      src="img/placeholder-image.jpg"
+      data-src="img/block3__img4.jpg"
       alt="image abstraction"
-      class="block-3__img wait-for-animate hide--bottom"
+      class="block-3__img wait-for-animate hide--bottom lazy"
     />
   </div>
   <div class="block-3__row">
     <img
-      src="img/block3__img5.jpg"
+      src="img/placeholder-image.jpg"
+      data-src="img/block3__img5.jpg"
       alt="image abstraction"
-      class="block-3__img wait-for-animate hide--bottom"
+      class="block-3__img wait-for-animate hide--bottom lazy"
     />
     <img
-      src="img/block3__img6.jpg"
+      src="img/placeholder-image.jpg"
+      data-src="img/block3__img6.jpg"
       alt="image abstraction"
-      class="block-3__img wait-for-animate hide--top"
+      class="block-3__img wait-for-animate hide--top lazy"
     />
     <img
-      src="img/block3__img7.jpg"
+      src="img/placeholder-image.jpg"
+      data-src="img/block3__img7.jpg"
       alt="image abstraction"
-      class="block-3__img wait-for-animate hide--bottom"
+      class="block-3__img wait-for-animate hide--bottom lazy"
     />
     <img
-      src="img/block3__img8.jpg"
+      src="img/placeholder-image.jpg"
+      data-src="img/block3__img8.jpg"
       alt="image abstraction"
-      class="block-3__img wait-for-animate hide--top"
+      class="block-3__img wait-for-animate hide--top lazy"
     />
   </div>
 </section>
