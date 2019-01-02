@@ -23,7 +23,7 @@ first viewport: {
     url("../fonts/Zurich Black Extended.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url("../fonts/Zurich Black Extended.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: fallback;
+  font-display: swap;
 }
 @font-face {
   font-family: "Bank Gothic";
@@ -33,7 +33,7 @@ first viewport: {
     url("../fonts/Bank Gothic BT.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */ url("../fonts/Bank Gothic BT.woff")
       format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: fallback;
+  font-display: swap;
 }
 /* merriweather-300italic - latin */
 @font-face {
@@ -44,7 +44,7 @@ first viewport: {
     url("../fonts/merriweather-v19-latin-300italic.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url("../fonts/merriweather-v19-latin-300italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: fallback;
+  font-display: swap;
 }
 @font-face {
   font-family: "Ostrich Sans";
@@ -54,7 +54,7 @@ first viewport: {
     url("../fonts/Ostrich Sans - Black.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url("../fonts/Ostrich Sans - Black.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: fallback;
+  font-display: swap;
 }
 @font-face {
   font-family: "Helvetica";
@@ -64,8 +64,9 @@ first viewport: {
     url("../fonts/Helvetica LT Std - Ultra Comp.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url("../fonts/Helvetica LT Std - Ultra Comp.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: fallback;
+  font-display: swap;
 }
+
 /* dosis-600 - latin */
 @font-face {
   font-family: "Myriad Pro";
@@ -75,7 +76,7 @@ first viewport: {
     url("../fonts/Myriad Pro-Regular.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url("../fonts/Myriad Pro-Regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: fallback;
+  font-display: swap;
 }
 @font-face {
   font-family: "Dosis SemiBold";
@@ -85,7 +86,7 @@ first viewport: {
     url("../fonts/dosis-v7-latin-600.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url("../fonts/dosis-v7-latin-600.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -96,7 +97,7 @@ first viewport: {
     url("../fonts/Myriad Pro-Semibold.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url("../fonts/Myriad Pro-Semibold.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -107,7 +108,7 @@ first viewport: {
     url("../fonts/NEOTERIC.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url("../fonts/NEOTERIC.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: fallback;
+  font-display: swap;
 }
 
 /* open-sans-regular - latin */
@@ -119,7 +120,7 @@ first viewport: {
     url("../fonts/open-sans-v15-latin-regular.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url("../fonts/open-sans-v15-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: fallback;
+  font-display: swap;
 }
 
 /* pompiere-regular - latin */
@@ -131,7 +132,7 @@ first viewport: {
     url("../fonts/pompiere-v7-latin-regular.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url("../fonts/pompiere-v7-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: fallback;
+  font-display: swap;
 }
 @font-face {
   font-family: "Nirmala UI";
@@ -141,5 +142,5 @@ first viewport: {
     url("../fonts/Nirmala UI.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */ url("../fonts/Nirmala UI.woff")
       format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: fallback;
+  font-display: swap;
 }
